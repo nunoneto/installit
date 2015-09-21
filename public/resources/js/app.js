@@ -1,17 +1,19 @@
 (function(){
 
-  var app = angular.module("installit",[]);
+  var app = angular.module('installit',['ngRoute']);
 
-  app.config(['routeProvider',function($routeProvider){
+  app.config(['$routeProvider',function($routeProvider){
+
     $routeProvider
-      .when('/',function({
-          templateUrl:'views/main.html'
+      .when('/',{
+          templateUrl:'views/main.html',
           controller:'MainController'
       })
-      .otherwhise(function(){
+      .otherwise({
         redirectTo: '/'
-      }
-      );
+      });
+
   }]);
+
 
 }());

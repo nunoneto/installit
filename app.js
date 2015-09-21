@@ -6,6 +6,7 @@ app.set('view engine','ejs');
 
 app.use('/resources/libs',express.static('bower_components'));
 app.use('/resources',express.static('public/resources'));
+app.use('/views',express.static('public/html'));
 
 
 app.get('/',function(request, response){
